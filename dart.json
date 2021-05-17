@@ -1,0 +1,445 @@
+{
+    // Place your snippets for dart here. Each snippet is defined under a snippet name and has a prefix, body and 
+    // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+    // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+    // same ids are connected.
+    // Example:
+    "Print to console": {
+        "prefix": "log",
+        "body": [
+            "print('$1');",
+        ],
+        "description": "Log output to console"
+    },
+    "Log error to Console": {
+        "prefix": [
+            "loge",
+            "elog"
+        ],
+        "body": [
+            "print(\"$TM_FILENAME [ERROR@${1:methodName}] ${2:logMessage}\");",
+        ],
+        "description": "Log error output to console"
+    },
+    // Import snippets
+    "Import Packages": {
+        "prefix": [
+            "imp",
+            "import",
+        ],
+        "body": [
+            "import '${1:packageName}';"
+        ],
+        "description": "Import a package",
+    },
+    // Widget Snippets
+    "Create Get Builder": {
+        "prefix": [
+            "gb",
+            "GetBuilder"
+        ],
+        "body": [
+            "GetBuilder<$1>(",
+            "\tbuilder:(controller){",
+            "\t\treturn $2;",
+            "\t},",
+            ")"
+        ],
+        "description": "Creates a Get Builder",
+    },
+    "Create GetX Builder": {
+        "prefix": [
+            "gx",
+            "GetX"
+        ],
+        "body": [
+            "GetX<$1>(",
+            "\tbuilder:(controller){",
+            "\t\treturn $2;",
+            "\t},",
+            ")"
+        ],
+        "description": "Creates GetX"
+    },
+    "Create StatelessWidget With Container": {
+        "prefix": [
+            "slc",
+            "stlc"
+        ],
+        "body": [
+            "class $1 extends StatelessWidget{",
+            "\t@override",
+            "\tWidget build(BuildContext context){",
+            "\t\treturn ${2:Container}(",
+            "\t\t\t$3",
+            "\t\t);",
+            "\t}",
+            "}",
+        ],
+        "description": "Creates a statelessWidget with container",
+    },
+    "Create Stateful Widget With Container": {
+        "prefix": [
+            "sfc",
+            "sflc"
+        ],
+        "body": [
+            "class $1 extends StatefulWidget {",
+            "\t@override",
+            "\t_$1State createState() => _$1State();",
+            "}",
+            "class _$1State extends State<$1> {",
+            "\t@override",
+            "\tWidget build(BuildContext context) {",
+            "\t\treturn ${2:Container}(",
+            "\t\t\t$3",
+            "\t\t);",
+            "\t}",
+            "}"
+        ]
+    },
+    "Create Stateless Widget With Scaffold": {
+        "prefix": [
+            "sls",
+            "stls"
+        ],
+        "body": [
+            "class $1 extends StatelessWidget{",
+            "\t@override",
+            "\tWidget build(BuildContext context){",
+            "\t\treturn ${2:Scaffold}(",
+            "\t\t\t$3",
+            "\t\t);",
+            "\t}",
+            "}"
+        ],
+        "description": "Create Stateless Widget With Scaffold",
+    },
+    "Create Stateful Widget With Scaffold": {
+        "prefix": [
+            "sfs",
+            "sfls"
+        ],
+        "body": [
+            "class $1 extends StatefulWidget {",
+            "\t@override",
+            "\t_$1State createState() => _$1State();",
+            "}",
+            "class _$1State extends State<$1> {",
+            "\t@override",
+            "\tWidget build(BuildContext context) {",
+            "\t\treturn ${2:Scaffold}(",
+            "\t\t\t$3",
+            "\t\t);",
+            "\t}",
+            "}"
+        ],
+        "description": "Create Stateful Widget With Scaffold",
+    },
+    "Get Screen Height using GetX": {
+        "prefix": [
+            "ght",
+            "gheight"
+        ],
+        "body": "Get.height",
+        "description": "Get Screen Height from Getx",
+    },
+    "Get Screen Width using GetX": {
+        "prefix": [
+            "gwt",
+            "gwidth"
+        ],
+        "body": "Get.width",
+        "description": "Get Screen Width from Getx",
+    },
+    "Getx Controller Class": {
+        "prefix": [
+            "gtc",
+            "gtclass"
+        ],
+        "body": [
+            "Class $1 extends GetxController {",
+            "\t$2",
+            "}"
+        ],
+        "description": "Create a new class extending Getx Controller",
+    },
+    "Create New Get Material App": {
+        "prefix": [
+            "gma",
+            "gmyapp",
+        ],
+        "body": [
+            "class MyApp extends StatelessWidget {",
+            "\t@override",
+            "\tWidget build(BuildContext context) {",
+            "\t\treturn GetMaterialApp(",
+            "\t\t\ttitle: \"$1\",",
+            "\t\t\tdebugShowCheckedModeBanner: false,",
+            "\t\t\thome: $2,",
+            "\t\t);",
+            "\t}",
+            "}"
+        ],
+        "description": "Create a new Get Material App",
+    },
+    "Get Screen Height Using Media Query": {
+        "prefix": [
+            "sht",
+            "msht"
+        ],
+        "body": [
+            "MediaQuery.of(context).size.height"
+        ],
+        "description": "Get the screen height using media query"
+    },
+    "Get Screen Width Using Media Query": {
+        "prefix": [
+            "swt, mswt"
+        ],
+        "body": [
+            "MediaQuery.of(context).size.width"
+        ],
+        "description": "Get the screen width using media query"
+    },
+    "Create New Material App": {
+        "prefix": [
+            "ma",
+            "myapp",
+        ],
+        "body": [
+            "class MyApp extends StatelessWidget {",
+            "\t@override",
+            "\tWidget build(BuildContext context) {",
+            "\t\treturn MaterialApp(",
+            "\t\t\ttitle: \"$1\",",
+            "\t\t\tdebugShowCheckedModeBanner: false,",
+            "\t\t\thome: $2,",
+            "\t\t);",
+            "\t}",
+            "}"
+        ],
+        "description": "Create a new Material App",
+    },
+    "SizedBox with height": {
+        "prefix": [
+            "sbh",
+            "sbheight",
+            "sizedboxh"
+        ],
+        "body": "SizedBox(height: ${1:value},),",
+        "description": "Creates sizedbox with specified height",
+    },
+    "SizedBox with width": {
+        "prefix": [
+            "sbw",
+            "sbwidth",
+            "sizedboxw"
+        ],
+        "body": "SizedBox(width: ${1:value},),",
+        "description": "Creates sizedbox with specified width",
+    },
+    "Add Column Widget": {
+        "prefix": [
+            "clm",
+            "column"
+        ],
+        "body": [
+            "Column(",
+            "\tchildren:[$1],",
+            ")"
+        ],
+        "description": "Adds a column"
+    },
+    "Add Row Widget": {
+        "prefix": [
+            "rw",
+            "row"
+        ],
+        "body": [
+            "Row(",
+            "\tchildren:[$1],",
+            ")"
+        ],
+        "description": "Adds a Row"
+    },
+    "Add Spacer": {
+        "prefix": [
+            "spc",
+            "spacer"
+        ],
+        "body": "Spacer(),",
+        "description": "Creates a spacer"
+    },
+    //  Function snippets
+    "Create a Method": {
+        "prefix": [
+            "mtd",
+            "method"
+        ],
+        "body": [
+            "$LINE_COMMENT ${1:returnType} ${2:methodName}: ${3:methodDescription}",
+            "${1:returnType} ${2:functionName}($4){",
+            "\t${5:methodBody}",
+            "}"
+        ],
+        "description": "Create a Method"
+    },
+    "Create a Future Method": {
+        "prefix": [
+            "fmtd",
+            "futuremtd",
+        ],
+        "body": [
+            "$LINE_COMMENT ${1:returnType} ${2:methodName}: ${3: methodDescription}",
+            "Future<${1:returnType}> ${2:methodName}($4) async{",
+            "\t${5:methodBody}",
+            "}"
+        ],
+        "description": "Creating a future Method"
+    },
+    // Snippets for variable declaration
+    // String variables
+    "String variable": {
+        "prefix": [
+            "stv",
+            "stringv",
+        ],
+        "body": [
+            "String ${1:variableName};"
+        ],
+        "description": "Create a string variable"
+    },
+    "Final String variable": {
+        "prefix": [
+            "fstv",
+            "finalstv",
+            "fstringv",
+        ],
+        "body": [
+            "final String ${1:variableName} = \"${2:value}\";"
+        ],
+        "description": "Create a new final String variable",
+    },
+    // Int variables
+    "Int variable": {
+        "prefix": [
+            "itv",
+            "intv",
+        ],
+        "body": [
+            "int ${1:variableName};"
+        ],
+        "description": "Create a int variable"
+    },
+    "Final Int variable": {
+        "prefix": [
+            "fitv",
+            "finalitv",
+            "fitv",
+        ],
+        "body": [
+            "final int ${1:variableName} = ${2:value};"
+        ],
+        "description": "Create a new final int variable",
+    },
+    // Double variables
+    "Double variable": {
+        "prefix": [
+            "dbv",
+            "doublev",
+        ],
+        "body": [
+            "double ${1:variableName};"
+        ],
+        "description": "Create a double variable"
+    },
+    "Double String variable": {
+        "prefix": [
+            "fdbv",
+            "finaldbv",
+            "fdoublev",
+        ],
+        "body": [
+            "final double ${1:variableName} = ${2:value};"
+        ],
+        "description": "Create a new final double variable",
+    },
+    // Boolean Variables
+    "Boolean variable": {
+        "prefix": [
+            "blv",
+            "booleanv",
+        ],
+        "body": [
+            "bool ${1:variableName} = ${2:false};"
+        ],
+        "description": "Create a boolean variable"
+    },
+    "Final Boolean variable": {
+        "prefix": [
+            "fblv",
+            "finalblv",
+            "fbooleanv",
+        ],
+        "body": [
+            "final bool ${1:variableName} = ${2:false};"
+        ],
+        "description": "Create a new final boolean variable",
+    },
+    // Extras
+    "Add Symmetric Padding | Margin": {
+        "prefix": [
+            "sm",
+            "symmetric"
+        ],
+        "body": [
+            "EdgeInsets.symmetric(horizontal:${1:value}, vertical: ${2:value})",
+        ],
+        "description": "Adds Symmetric Padding | Margin value"
+    },
+    "Add Symmetric vertical value": {
+        "prefix": [
+            "smv",
+            "symmetricv"
+        ],
+        "body": [
+            "EdgeInsets.symmetric(vertical: ${1:value})",
+        ],
+        "description": "Adds Symmetric value vertical only",
+    },
+    "Add Symmetric horizontal value": {
+        "prefix": [
+            "smh",
+            "symmetrich"
+        ],
+        "body": [
+            "EdgeInsets.symmetric(horizontal: ${1:value})",
+        ],
+        "description": "Adds Symmteric value horizontal only",
+    },
+    "Add Box Decoration": {
+        "prefix": [
+            "bxd",
+            "boxdeocoration"
+        ],
+        "body": [
+            "BoxDecoration($1)"
+        ],
+        "description": "Adds a box decoration to container"
+    },
+    "Try Catch Block": {
+        "prefix": [
+            "try",
+            "try-catch"
+        ],
+        "body": [
+            "try{",
+            "\t${2:methodBody}",
+            "}catch(e){",
+            "\tprint(\"[ERROR@${1:methodName}] \" + e);",
+            "}",
+        ]
+    },
+    // Test snippets
+}
